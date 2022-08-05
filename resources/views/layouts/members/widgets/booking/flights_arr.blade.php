@@ -23,7 +23,7 @@
             <tr>
                 <td style="text-align: center">
                     @php
-                    if(($icao = mb_substr($flight->flight, 0, 1)) == "N"){
+                    if(($icao = mb_substr($flight->flight, 0, 1)) == "N" && ($icao = mb_substr($flight->flight, 0, 3)) !== "NSE" && ($icao = mb_substr($flight->flight, 0, 3)) !== "NKS"){
    $airline = $icao;
 }
 elseif (($icao = mb_substr($flight->flight, 0, 2)) == "HK") {
