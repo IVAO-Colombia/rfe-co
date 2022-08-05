@@ -89,36 +89,6 @@
                         >{{ __("custom.Statistics") }}</a
                     >
                 </li>
-                <li class="nav-item dropdown">
-                    <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        id="navbarLangDrop"
-                        role="button"
-                        data-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        <i class="fas fa-language fa-fw"></i>&nbsp;{{
-                            __("custom.Language")
-                        }}
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarLangDrop">
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="{{ url('locale/en') }}"
-                                >{{ __("custom.English") }}</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="{{ url('locale/es') }}"
-                                >{{ __("custom.Spanish") }}</a
-                            >
-                        </li>
-                    </ul>
-                </li>
                 @if (Auth::check())
                 <li class="nav-item dropdown">
                     <a
