@@ -21,7 +21,17 @@
             <tr>
                 <td style="text-align: center">
                 @php
-                    $airline = mb_substr($flight->flight, 0, 3);
+
+                    if(($icao = mb_substr($flight->flight, 0, 1)) == "N"){
+   $airline = $icao;
+}
+elseif (($icao = mb_substr($flight->flight, 0, 2)) == "HK") {
+    $airline = $icao;
+}
+else {
+   $airline = mb_substr($flight->flight, 0, 3);
+    print($airline);
+};
                     @endphp
                     <img class="airlineslogo" src="{{URL::asset("/src/img/airlines/$airline.png")
                     }}"/>
