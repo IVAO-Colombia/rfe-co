@@ -30,7 +30,6 @@ elseif (($icao = mb_substr($flight->flight, 0, 2)) == "HK") {
 }
 else {
    $airline = mb_substr($flight->flight, 0, 3);
-    print($airline);
 };
                     @endphp
                     <img class="airlineslogo" src="{{URL::asset("/src/img/airlines/$airline.png")
