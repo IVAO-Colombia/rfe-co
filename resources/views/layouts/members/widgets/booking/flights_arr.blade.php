@@ -22,7 +22,7 @@
             @foreach ($flights_arr as $flight)
             <tr>
                 <td style="text-align: center">
-                    <img class="airlineslogo" src="{{URL::asset("/src/img/airlines/$flight->airline.png")
+                    <img class="airlineslogo" src="{{URL::asset("/src/img/airlines/mb_substr($flight->flight, 0, 3).png")
                     }}"/>
                 </td>
                 <td>{{$flight->flight}}</td>
