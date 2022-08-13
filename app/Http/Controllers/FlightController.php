@@ -74,7 +74,7 @@ class FlightController extends Controller
     {
         Flight::where('id', $id)->update($request->except(['_token', '_method']));
         $flight = Flight::find($id);
-        Mail::to($request->user())->send(new BookingCreated($flight));
+     ##   Mail::to($request->user())->send(new BookingCreated($flight));
         return redirect()->back()->with('success', 'Update Successfuly');
     }
 

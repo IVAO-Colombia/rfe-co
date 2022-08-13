@@ -64,7 +64,8 @@ else {
                     <form
                         action="{{ route('flights.update', $flight->id) }}"
                         method="POST"
-                    >
+                        
+                    >         
                         @csrf @method('PUT')
                         <div class="mb-3">
                             <input

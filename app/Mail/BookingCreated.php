@@ -33,4 +33,6 @@ class BookingCreated extends Mailable
     {
         return $this->view('emails.Booking.Created');
     }
+
 }
+

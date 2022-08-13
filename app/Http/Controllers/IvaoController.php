@@ -22,7 +22,7 @@ class IvaoController extends Controller
             $user = Socialite::driver('ivao')->user()->getRaw();
 
             if (!$user) {
-                return redirect()->away('https://rfe.co.ivao.aero');
+                return redirect()->away('https://events.co.ivao.aero/');
             }
 
             $finduser = User::where('id', intval($user["vid"]))->first();
@@ -46,7 +46,7 @@ class IvaoController extends Controller
                 $newUser = User::create([
                     'id' => intval($user["vid"]),
                     'name' => $user["firstname"] . " " . $user["lastname"],
-                    'email' => $user["vid"],
+                    'email' => $user["mail"],
                     'rating' => intval($user["rating"]),
                     'ratingatc' => intval($user["ratingatc"]),
                     'ratingpilot' => intval($user["ratingpilot"]),
