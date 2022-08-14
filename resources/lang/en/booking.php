@@ -2,7 +2,9 @@
 
 return [
     'Departure' => 'Departure',
+    'DepartureTime' => 'Departure Time',
     'Arrival' => 'Arrival',
+    'ArrivalTime' => 'Arrival Time',
     'Origin' => 'Origin',
     'Operator' => 'Operator',
     'Flight' => 'Flight',
