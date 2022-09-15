@@ -22,7 +22,7 @@ return [
     'EmailParagraph' => 'Enter your email, in order to optimize and have a better experience with the RFO SKRG 2022.',
     /* Home */
     'RfeTitle' => 'RFO SKRG - Jose Maria Cordova',
-    'RfeTitle2' => 'RFO SKMD - Olaya Herrera', 
+    'RfeTitle2' => 'RFO SKMD - Olaya Herrera',
     'RfeDescription' => 'José María Córdova International airport
     (IATA: MDE, ICAO: SKRG) is a Colombian
     airport located in the township of Rionegro
