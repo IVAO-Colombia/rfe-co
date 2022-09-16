@@ -49,7 +49,7 @@ Nav
 Route::view('/', 'layouts/members/home')->name('Home');
 Route::view('/briefing/pilots', 'layouts/members/pages/briefing/pilots')->name('PilotsBriefing');
 Route::get('/booking/atc', function () {
-    return redirect("https://tools.ivao.aero/event/CO/schedule/1753");
+    return redirect("https://tools.ivao.aero/event/CO/");
 })->name('AtcBooking');
 Route::view('/statistics', 'layouts/members/pages/statistics/statistics')->name('Statistics');
 Route::view('/profile', 'layouts/members/pages/profile/profile')->name('Profile');

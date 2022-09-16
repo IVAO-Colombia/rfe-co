@@ -4,11 +4,11 @@
      
         
 
-        <div class="col-md-10 position-relative">
-            <h1 class="descripRFE position-absolute top-15 start-0"><?php echo e(__("custom.RfeTitle")); ?></h1>
+        <div class="col-md-10 position-relative mx-5 mb-3">
+            <h1 class="descripRFE"><?php echo e(__("custom.RfeTitle")); ?></h1>
         </div>
 
-        <div class="col-md-7 position-relative">
+        <div class="col-md-7 mx-2">
             <h4 style="text-align: justify" class="aboutRFE">
                 <?php echo e(__("custom.RfeDescription")); ?>
 
