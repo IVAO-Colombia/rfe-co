@@ -46,7 +46,7 @@ class IvaoController extends Controller
                 $newUser = User::create([
                     'id' => intval($user["vid"]),
                     'name' => $user["firstname"] . " " . $user["lastname"],
-                    'email' => $user["mail"],
+                    'email' => $user["vid"],
                     'rating' => intval($user["rating"]),
                     'ratingatc' => intval($user["ratingatc"]),
                     'ratingpilot' => intval($user["ratingpilot"]),
