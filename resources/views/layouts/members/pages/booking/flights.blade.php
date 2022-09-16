@@ -14,8 +14,9 @@
                     aria-label="Basic mixed styles"
                 >
                     <button
-                        class="btn btn-warning flights"
+                        class="btn flights"
                         type="button"
+                        style="background-color: #1A5276; color: #fff"
                         data-toggle="collapse"
                         data-target="#collapseDep"
                         aria-expanded="false"
@@ -26,8 +27,9 @@
                         }}s
                     </button>
                     <button
-                        class="btn btn-warning flights"
+                        class="btn flights"
                         type="button"
+                        style="background-color: #1A5276; color: #fff"
                         data-toggle="collapse"
                         data-target="#collapseArr"
                         aria-expanded="false"
