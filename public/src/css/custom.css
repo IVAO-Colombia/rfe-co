@@ -2,6 +2,24 @@
     font-family: "Open Sans", sans-serif;
 }
 
+:root{
+    --principal-color: #111620;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: transparent;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--principal-color);
+    border-radius: 50px;
+}
+
 /* Home */
 .container .navbar-brand {
     padding-top: unset;
@@ -33,16 +51,17 @@ li .dropdown-item:active {
 /* carousel */
 header.header1 {
     background: linear-gradient(
-            0deg,
-            rgba(1, 15, 45, 0.2) 0%,
-            rgba(1, 15, 45, 0.4) 25%,
-            rgba(1, 15, 45, 1) 100%
+            325deg,
+            rgba(1, 15, 45, 0.050) 0%,
+            rgba(1, 15, 45, 0.200) 25%,
+            rgba(17, 22, 32, 1) 100%
         ),
-        url(../img/carousel/1.png) no-repeat center top;
+        url(../img/carousel/RFO_BOGOTA.png) no-repeat center top;
     background-size: cover;
     min-height: 88.5vh;
 }
 
+/*  SLIDER
 header.header2 {
     background: linear-gradient(
             0deg,
@@ -90,12 +109,17 @@ header.header5 {
     background-size: cover;
     min-height: 88.5vh;
 }
-
+*/ 
 a .bg-grey {
     border-radius: unset;
     position: absolute;
     bottom: 0rem;
     right: 0rem;
+}
+
+h4.aboutRFE{
+    color: #181818;
+    
 }
 
 h1.username {
@@ -143,7 +167,7 @@ h3.headerRFE {
 h1.descripRFE {
     font-family: 'Poppins', sans-serif;  
     font-weight: 800;
-    color: #3498DB;
+    color: var(--principal-color);
     font-size: 4rem;
 }
 
@@ -216,7 +240,7 @@ fieldset:disabled .by.btn {
 /* bg */
 
 .bg-dark-blue {
-    background-color: #010f2d;
+    background-color: #111620;
     color: #ffffff;
 }
 

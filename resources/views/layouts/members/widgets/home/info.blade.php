@@ -1,11 +1,15 @@
-<div class="container" style="height: 100vh">
+<div class="container-fluid" style="height: 100vh">
     <div class="clearfix" style="height: 3rem"></div>
-    <div class="row justify-content-md-center">
-        <div class="col-md-10">
-            <h1 class="descripRFE"><?php echo e(__("custom.RfeTitle")); ?></h1>
+    <div class="row">
+     
+        
+
+        <div class="col-md-10 position-relative">
+            <h1 class="descripRFE position-absolute top-15 start-0"><?php echo e(__("custom.RfeTitle")); ?></h1>
         </div>
-        <div class="col-md-7">
-            <h4 style="text-align: justify">
+
+        <div class="col-md-7 position-relative">
+            <h4 style="text-align: justify" class="aboutRFE">
                 <?php echo e(__("custom.RfeDescription")); ?>
 
             </h4>
