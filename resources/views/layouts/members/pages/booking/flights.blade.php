@@ -16,7 +16,7 @@
                 }
 
                 .btn.flights.btn-primary {
-                    background-color: #34148b;
+                    background-color: #0D2C99;
                 }
 
                 .btn-old {
