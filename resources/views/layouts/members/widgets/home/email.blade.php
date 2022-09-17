@@ -6,12 +6,17 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <form action="{{ route('users.update', Auth::user()->id) }}" method="POST">
-                            @csrf @method('PUT')
+                            @csrf
+                            @method('PUT')
                             <p>{{ __('custom.EmailParagraph') }}</p>
                             <div class="mb-3">
                                 <label for="Email" class="form-label">{{ __('custom.Email') }}</label>
                                 <input type="email" name="email" class="form-control" id="Email" />
                             </div>
+                            <div class="text-right">
+                                <button class="btn btn-secondary" type="submit">Send</button>
+                            </div>
+
                         </form>
                     </div>
                 </div>

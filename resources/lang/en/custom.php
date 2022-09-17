@@ -19,7 +19,7 @@ return [
     'PilotsBriefingPdf' => "/src/doc/Briefing.pdf",
     /* Email */
     'Email' => 'Email:',
-    'EmailParagraph' => 'Enter your email, in order to optimize and have a better experience with the RFO SKRG 2022.',
+    'EmailParagraph' => 'Enter your email, in order to optimize and have a better experience with the RFE SKBO 2022.',
     /* Home */
     'Unkdown' => 'Unkdown',
     'RfeTitle' => 'RFE SKBO - El Dorado',
