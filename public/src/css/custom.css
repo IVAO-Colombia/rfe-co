@@ -3,7 +3,7 @@
 }
 
 :root{
-    --principal-color: #111620;
+    --principal-color: #0D2C99;
 }
 
 ::-webkit-scrollbar{
@@ -121,7 +121,7 @@ header.header5 {
     background-size: cover;
     min-height: 88.5vh;
 }
-*/ 
+*/
 a .bg-grey {
     border-radius: unset;
     position: absolute;
@@ -131,7 +131,7 @@ a .bg-grey {
 
 h4.aboutRFE{
     color: #181818;
-    
+
 }
 
 h1.username {
@@ -177,7 +177,7 @@ h3.headerRFE {
 }
 
 h1.descripRFE {
-    font-family: 'Poppins', sans-serif;  
+    font-family: 'Poppins', sans-serif;
     font-weight: 800;
     color: var(--principal-color);
     font-size: 4rem;
@@ -252,7 +252,7 @@ fieldset:disabled .by.btn {
 /* bg */
 
 .bg-dark-blue {
-    background-color: #111620;
+    background-color: #0D2C99;
     color: #ffffff;
 }
 
