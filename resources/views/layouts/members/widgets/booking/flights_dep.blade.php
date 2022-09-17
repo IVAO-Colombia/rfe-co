@@ -8,8 +8,8 @@
                 </th>
                 <th scope="col">{{ __("booking.Flight") }}</th>
                 <th scope="col">{{ __("booking.Aircraft") }}</th>
-                <th scope="col">{{ __("booking.Destination") }}</th>
                 <th scope="col">{{ __("booking.Origin") }}</th>
+                <th scope="col">{{ __("booking.Destination") }}</th>
                 <th scope="col">{{ __("booking.Departure") }}</th>
                 <th scope="col">{{ __("booking.Arrival") }}</th>
                 <th scope="col" style="text-align: center">
@@ -38,8 +38,8 @@ else {
                 </td>
                 <td>{{$flight->flight}}</td>
                 <td>{{$flight->aircraft}}</td>
-                <td>{{$flight->destination}}</td>
                 <td>{{$flight->departure}}</td>
+                <td>{{$flight->destination}}</td>
                 <td>
                     @php $time = $flight->departure_time; $splitTime =
                     explode(':', $time); $zuluTime =
