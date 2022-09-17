@@ -16,6 +16,18 @@
                     color: #4866c7 !important;
                 }
 
+                .btn-success {
+                    background: #2EC662 !important;
+                    border-color: #2EC662 !important;
+                }
+
+                .btn-danger.disabled,
+                .btn-danger:disabled {
+                    color: #fff;
+                    background-color: #E93434 !important;
+                    border-color: #E93434 !important;
+                }
+
                 .btn.flights.btn-primary {
                     background-color: #0D2C99;
                 }
