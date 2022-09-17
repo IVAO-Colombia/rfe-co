@@ -3,8 +3,14 @@
     <head>
         @include('layouts/members/head')
     </head>
-    <body>
+    <body class="briefing__body">
+
+
+
         @include('layouts/members/nav')
+
+        
+
         <div class="clearfix" style="height: 2rem"></div>
         <div class="container">
             <div class="col-md-12" style="text-align: center">
@@ -12,6 +18,10 @@
                 height="650px">
             </div>
         </div>
+
+
+
+
         <!-- Optional JavaScript -->
 
         <!-- Bootstrap Bundle with Popper.js -->

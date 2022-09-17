@@ -61,6 +61,18 @@ header.header1 {
     min-height: 88.5vh;
 }
 
+.briefing__body{
+    background: linear-gradient(
+        325deg,
+        rgba(1, 15, 45, 0.050) 0%,
+        rgba(1, 15, 45, 0.500) 25%,
+        rgba(17, 22, 32, 1) 100%
+    ),
+    url(../img/carousel/Background_Briefing.png) no-repeat center top;
+    background-size: cover;
+    min-height: 88.5vh;
+}
+
 /*  SLIDER
 header.header2 {
     background: linear-gradient(
