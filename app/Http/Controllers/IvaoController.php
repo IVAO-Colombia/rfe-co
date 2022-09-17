@@ -19,11 +19,14 @@ class IvaoController extends Controller
     {
         try {
 
+            $response = Socialite::driver('ivao')->user();
+            if (!$response) {
+                return redirect()->away(config('app.url'));
+            }
+
             $user = Socialite::driver('ivao')->user()->getRaw();
 
-            if (!$user) {
-                return redirect()->away('https://events.co.ivao.aero/');
-            }
+
 
             $finduser = User::where('id', intval($user["vid"]))->first();
 
