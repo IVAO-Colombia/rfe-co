@@ -2,8 +2,8 @@
     <div class="container">
         <a class="navbar-brand" href="{{ route('Home') }}"><img class="logo"
                 src="{{ URL::asset('/src/img/ivao-co.png') }}" /></a>
-        <button class="navbar-toggler" style="background: white" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" style="background: white" type="button" data-toggle="collapse"
+            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -32,7 +32,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarLangDrop">
                         <li>
-                            <a class="dropdown-item"  href="{{ route('flights.index') }}"><i
+                            <a class="dropdown-item" href="{{ route('flights.index') }}"><i
                                     class="fas fa-plane fa-fw"></i>&nbsp;{{ __('custom.PilotsBooking') }}</a>
                         </li>
                         <li>
@@ -74,7 +74,7 @@
                 <div class="clearfix" style="width: 5rem"></div>
                 <li class="nav-item">
                     <h4 id="countdown" style="font-weight: 700">
-                        @include('layouts/members/widgets/nav/countdown')
+                        @include('layouts.members.widgets.nav.countdown')
                     </h4>
                 </li>
             </ul>

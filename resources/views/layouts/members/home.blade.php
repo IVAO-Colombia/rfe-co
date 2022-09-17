@@ -6,8 +6,19 @@
 </head>
 
 <body>
+    <style>
+        .patron {
+            background: url('{{ asset('src/img/pat2.png') }}');
+        }
+
+        .btn-large {
+            font-size: 1.5rem;
+            padding: 10px 30px;
+        }
+    </style>
+
     @include('layouts.members.widgets.home.email')
-    @include('layouts/members/widgets/home/carousel')
+    @include('layouts.members.widgets.home.carousel')
     @include('layouts.members.widgets.home.info')
     <!-- Optional JavaScript -->
 
