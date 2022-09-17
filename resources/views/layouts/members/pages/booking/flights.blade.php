@@ -13,6 +13,7 @@
             <style>
                 .btn.flights.btn-primary.collapsed {
                     background-color: #D7D7DC;
+                    color: #4866c7 !important;
                 }
 
                 .btn.flights.btn-primary {
