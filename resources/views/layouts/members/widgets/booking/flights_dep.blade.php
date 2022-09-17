@@ -42,18 +42,20 @@ $flights_dep = App\Models\Flight::where('type', 'departure')
                     <td>{{ $flight->departure }}</td>
                     <td>{{ $flight->destination }}</td>
                     <td>
-                        @php$time = $flight->departure_time;
+                        @php
+                            $time = $flight->departure_time;
                             $splitTime = explode(':', $time);
                             $zuluTime = $splitTime[0] . ':' . $splitTime[1] . '&nbsp;Z';
                             echo $zuluTime;
                         @endphp
                     </td>
                     <td>
-                        @php$time = $flight->arrival_time;
+                        @php
+                            $time = $flight->arrival_time;
                             $splitTime = explode(':', $time);
                             $zuluTime = $splitTime[0] . ':' . $splitTime[1] . '&nbsp;Z';
                             echo $zuluTime;
-                        @endphp
+                        @endphp ?>
                     </td>
                     <td style="text-align: center">
                         @if (!$flight->user_id == null)
