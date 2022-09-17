@@ -55,7 +55,7 @@ $flights_dep = App\Models\Flight::where('type', 'departure')
                             $splitTime = explode(':', $time);
                             $zuluTime = $splitTime[0] . ':' . $splitTime[1] . '&nbsp;Z';
                             echo $zuluTime;
-                        @endphp ?>
+                        @endphp
                     </td>
                     <td style="text-align: center">
                         @if (!$flight->user_id == null)
