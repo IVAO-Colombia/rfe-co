@@ -14,5 +14,14 @@
             integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy"
             crossorigin="anonymous"
         ></script>
+
+        <div class="container-fluid">
+            <div>
+                <table>
+                    
+                </table>
+            </div>
+        </div>
+
     </body>
 </html>
