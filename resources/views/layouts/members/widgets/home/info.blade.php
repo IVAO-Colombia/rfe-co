@@ -112,16 +112,20 @@
             </div>
             <div class="card homeCard">
                 <div class="card-body">
-                    <a href="{{ asset('/src/doc/gates.pdf') }}" target="_blank" class="btn btn-primary btn-large">
+                    <a href="{{ asset('/src/doc/gates.pdf') }}" target="_blank"
+                        class="btn btn-primary btn-large mr-2 mb-2">
                         Gates
                     </a>
-                    <a href="{{ asset('/src/doc/airport.pdf') }}" target="_blank" class="btn btn-primary btn-large">
+                    <a href="{{ asset('/src/doc/airport.pdf') }}" target="_blank"
+                        class="btn btn-primary btn-large mr-2 mb-2">
                         Airport
                     </a>
-                    <a class="btn btn-primary btn-large" href="{{ asset('/src/doc/SKBO.pdf') }}" target="_blank">
+                    <a class="btn btn-primary btn-large mr-2 mb-2" href="{{ asset('/src/doc/SKBO.pdf') }}"
+                        target="_blank">
                         {{ __('custom.AirportChart') }}
                     </a>
-                    <a class="btn btn-primary btn-large" href="{{ asset('/src/doc/TMA.pdf') }}" target="_blank">
+                    <a class="btn btn-primary btn-large mr-2 mb-2" href="{{ asset('/src/doc/TMA.pdf') }}"
+                        target="_blank">
                         {{ __('custom.TMAChart') }}
                     </a>
                 </div>
