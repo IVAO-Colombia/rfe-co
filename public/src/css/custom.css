@@ -1,5 +1,5 @@
 * {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 :root{
@@ -135,7 +135,7 @@ h4.aboutRFE{
 }
 
 h1.username {
-    font-family: "Montserrat", sans-serif;
+
     font-weight: 900;
     position: absolute;
     margin-left: auto;
@@ -149,7 +149,7 @@ h1.username {
 }
 
 h1.username.second {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Nunito Sans", sans-serif;
     font-weight: 900;
     position: absolute;
     margin-left: auto;
@@ -163,7 +163,7 @@ h1.username.second {
 }
 
 h3.headerRFE {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Nunito Sans", sans-serif;
     font-weight: 700;
     position: absolute;
     margin-left: auto;
@@ -177,7 +177,7 @@ h3.headerRFE {
 }
 
 h1.descripRFE {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-weight: 800;
     color: var(--principal-color);
     font-size: 4rem;
@@ -239,7 +239,7 @@ a:hover.LinkSKBO {
 
 .btn-group-lg > .btn.flights,
 .btn.flights {
-    border-radius: 2rem;
+    border-radius: 0.9rem;
 }
 
 .by.btn.disabled,

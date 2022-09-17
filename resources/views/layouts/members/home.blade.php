@@ -8,7 +8,7 @@
 <body>
     @include('layouts.members.widgets.home.email')
     @include('layouts/members/widgets/home/carousel')
-    @include('layouts/members/widgets/home/info')
+    @include('layouts.members.widgets.home.info')
     <!-- Optional JavaScript -->
 
     <!-- Bootstrap Bundle with Popper.js -->
