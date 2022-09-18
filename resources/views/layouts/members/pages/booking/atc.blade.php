@@ -26,25 +26,24 @@ function getPositionBooking($dependence)
     </script>
 
     <div class="container">
-        <div>
+        <div class="table-responsive">
             @php
                 
                 $skbodel = getPositionBooking('SKBO_DEL');
-
+                
                 $skbo_n_gnd = getPositionBooking('SKBO_N_GND');
                 $skbo_s_gnd = getPositionBooking('SKBO_S_GND');
-
+                
                 $skbo_n_twr = getPositionBooking('SKBO_N_TWR');
                 $skbo_s_twr = getPositionBooking('SKBO_S_TWR');
-
+                
                 $skbo_n_app = getPositionBooking('SKBO_N_APP');
                 $skbo_s_app = getPositionBooking('SKBO_S_APP');
                 $skbo_w_app = getPositionBooking('SKBO_W_APP');
                 $skboapp = getPositionBooking('SKBO_APP');
-
-                $skedctr = getPositionBooking('SKED_CTR')
-
-
+                
+                $skedctr = getPositionBooking('SKED_CTR');
+                
             @endphp
             <table class="table table-bordered table-striped">
                 <thead>
