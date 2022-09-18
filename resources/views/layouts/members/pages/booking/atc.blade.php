@@ -37,7 +37,7 @@ function getPositionBooking($dependence)
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <td width="25%"><strong>RFE</strong></td>
+                        <td width="15%"><strong>RFE</strong></td>
                         <td style="text-align: center">13:00 - 14:00 UTC</td>
                         <td style="text-align: center">14:00 - 15:00 UTC</td>
                         <td style="text-align: center">15:00 - 16:00 UTC</td>
