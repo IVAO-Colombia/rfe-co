@@ -27,10 +27,12 @@ function getPositionBooking($dependence)
     <style>
         .bg-success {
             background-color: #2EC662 !important;
+            color: #fff;
         }
 
         .bg-danger {
             background-color: #E93434 !important;
+            color: #fff;
         }
     </style>
 
