@@ -48,9 +48,9 @@ Nav
 
 Route::view('/', 'layouts.members.home')->name('Home');
 Route::view('/briefing/pilots', 'layouts.members.pages.briefing.pilots')->name('PilotsBriefing');
-Route::view('/booking/atc',"layouts/members/pages/booking/atc")->name('AtcBooking');
-Route::view('/statistics', 'layouts/members/pages/statistics/statistics')->name('Statistics');
-Route::view('/profile', 'layouts/members/pages/profile/profile')->name('Profile');
+Route::view('/booking/atc',"layouts.members.pages.booking.atc")->name('AtcBooking');
+Route::view('/statistics', 'layouts.members.pages.statistics.statistics')->name('Statistics');
+Route::view('/profile', 'layouts.members.pages.profile.profile')->name('Profile');
 
 /*
 IVAO Login
