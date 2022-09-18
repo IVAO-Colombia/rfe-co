@@ -145,7 +145,7 @@
                         target="_blank">
                         {{ __('custom.AirportChart') }}
                     </a>
-                    <a class="btn btn-primary btn-large mr-2 mb-2" href="{{ asset('/src/doc/TMA.pdf') }}"
+                    <a class="btn btn-primary btn-large mr-2 mb-2" href="{{ asset('/src/doc/TMABOGOTA.pdf') }}"
                         target="_blank">
                         {{ __('custom.TMAChart') }}
                     </a>
