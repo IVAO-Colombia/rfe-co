@@ -36,7 +36,7 @@
                                     class="fas fa-plane fa-fw"></i>&nbsp;{{ __('custom.PilotsBooking') }}</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" target="_blank" href="{{ route('AtcBooking') }}"><i
+                            <a class="dropdown-item"  href="{{ route('AtcBooking') }}"><i
                                     class="fas fa-broadcast-tower fa-fw"></i>&nbsp;{{ __('custom.AtcBooking') }}</a>
                         </li>
                     </ul>
