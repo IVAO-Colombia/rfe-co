@@ -58,7 +58,6 @@ function getPositionBooking($dependence)
                         <td style="text-align: center">21:00 - 22:00 UTC</td>
                         <td style="text-align: center">22:00 - 23:00 UTC</td>
                         <td style="text-align: center">23:00 - 00:00 UTC</td>
-                        <td style="text-align: center">23:00 - 00:00 UTC</td>
                         <td style="text-align: center">00:00 - 01:00 UTC</td>
                     </tr>
                 </thead>
