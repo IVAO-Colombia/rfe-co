@@ -147,6 +147,13 @@ function getPositionBooking($dependence)
                 </tbody>
             </table>
         </div>
+        <div class="row">
+            <div class="col-md-12 text-center my-3">
+                <p class="lead"> For reservations send an email to <a
+                        href="mailto:co-xx@ivao.aero">co-xx@ivao.aero</a> </p>
+            </div>
+        </div>
+
         <div class="clearfix" style="height: 2rem">
         </div>
 
