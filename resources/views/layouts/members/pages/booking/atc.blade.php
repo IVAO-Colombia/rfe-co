@@ -1,3 +1,13 @@
+@php
+use App\Models\BookingAtc;
+function getPositionBooking($dependence)
+{
+    return BookingAtc::where('dependence', $dependence)
+        ->orderBy('order')
+        ->get();
+}
+@endphp
+
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 
@@ -18,10 +28,11 @@
     <div class="container">
         <div>
             @php
-                use App\Models\BookingAtc;
-                $skbodel = BookingAtc::where('dependence', 'SKBO_DEL')
-                    ->orderBy('order')
-                    ->get();
+                
+                $skbodel = getPositionBooking('SKBO_DEL');
+                $skbodel = getPositionBooking('SKBO_DEL');
+                $skbodel = getPositionBooking('SKBO_DEL');
+                
             @endphp
             <table class="table table-bordered table-striped">
                 <thead>

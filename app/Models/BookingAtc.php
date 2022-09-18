@@ -10,4 +10,6 @@ class BookingAtc extends Model
     use HasFactory;
 
     protected $table = "bookings_atc";
+
+
 }
