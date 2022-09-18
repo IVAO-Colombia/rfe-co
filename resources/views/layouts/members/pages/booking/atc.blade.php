@@ -24,6 +24,15 @@ function getPositionBooking($dependence)
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy" crossorigin="anonymous">
     </script>
+    <style>
+        .bg-success {
+            background-color: #2EC662 !important;
+        }
+
+        .bg-danger {
+            background-color: #E93434 !important;
+        }
+    </style>
 
     <div class="container">
         <div class="table-responsive">
@@ -66,49 +75,57 @@ function getPositionBooking($dependence)
                     <tr>
                         <td>SKBO_DEL</td>
                         @foreach ($skbodel as $item)
-                            <td>{{ $item->vid }}</td>
+                            <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
+                            </td>
                         @endforeach
                     </tr>
                     <tr>
                         <td>SKBO_N_TWR</td>
                         @foreach ($skbo_n_twr as $item)
-                            <td>{{ $item->vid }}</td>
+                            <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
+                            </td>
                         @endforeach
                     </tr>
                     <tr>
                         <td>SKBO_S_TWR</td>
                         @foreach ($skbo_s_twr as $item)
-                            <td>{{ $item->vid }}</td>
+                            <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
+                            </td>
                         @endforeach
                     </tr>
                     <tr>
                         <td>SKBO_N_APP</td>
                         @foreach ($skbo_n_app as $item)
-                            <td>{{ $item->vid }}</td>
+                            <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
+                            </td>
                         @endforeach
                     </tr>
                     <tr>
                         <td>SKBO_S_APP</td>
                         @foreach ($skbo_s_app as $item)
-                            <td>{{ $item->vid }}</td>
+                            <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
+                            </td>
                         @endforeach
                     </tr>
                     <tr>
                         <td>SKBO_W_APP</td>
                         @foreach ($skbo_w_app as $item)
-                            <td>{{ $item->vid }}</td>
+                            <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
+                            </td>
                         @endforeach
                     </tr>
                     <tr>
                         <td>SKBO_APP (Arrivals)</td>
                         @foreach ($skboapp as $item)
-                            <td>{{ $item->vid }}</td>
+                            <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
+                            </td>
                         @endforeach
                     </tr>
                     <tr>
                         <td>SKED_CTR</td>
                         @foreach ($skedctr as $item)
-                            <td>{{ $item->vid }}</td>
+                            <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
+                            </td>
                         @endforeach
                     </tr>
                 </tbody>
