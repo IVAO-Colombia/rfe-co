@@ -1,12 +1,17 @@
 <div id="homeCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3500" data-pause="false">
     <div class="carousel-inner">
+
         @include('layouts.members.nav')
         <div class="carousel-item active">
+
             <div class="arrow bounce">
                 <i class="fas fa-arrow-down fa-3x"></i>
             </div>
             <h1 class="username">@include('layouts.members.widgets.home.name')</h1>
+            <div class="patron">
+            </div>
             <header class="header1">
+
                 <a href="" target="_blank"><span class="badge bg-grey"></span></a>
             </header>
         </div>

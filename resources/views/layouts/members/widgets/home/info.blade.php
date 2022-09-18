@@ -19,49 +19,6 @@
                     <div class="card homeCard">
                         <div class="card-body">
                             <h5 class="card-title">
-                                {{ __('custom.RunwayInformation') }}
-
-                            </h5>
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Runway</th>
-                                            <th scope="col">Heading</th>
-                                            <th scope="col">Elevation</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>{{ __('custom.Unkdown') }}</td>
-                                            <td>{{ __('custom.Unkdown') }}</td>
-                                            <td>{{ __('custom.Unkdown') }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>{{ __('custom.Unkdown') }}</td>
-                                            <td>{{ __('custom.Unkdown') }}</td>
-                                            <td>{{ __('custom.Unkdown') }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>{{ __('custom.Unkdown') }}</td>
-                                            <td>{{ __('custom.Unkdown') }}</td>
-                                            <td>{{ __('custom.Unkdown') }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>{{ __('custom.Unkdown') }}</td>
-                                            <td>{{ __('custom.Unkdown') }}</td>
-                                            <td>{{ __('custom.Unkdown') }}</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card homeCard">
-                        <div class="card-body">
-                            <h5 class="card-title">
                                 {{ __('custom.Frequencies') }}
 
                             </h5>
@@ -76,24 +33,44 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>SKBO_TWR</td>
-                                            <td>{{ __('custom.Unkdown') }}</td>
+                                            <td>SKBO_DEL</td>
+                                            <td>121,6 MHz</td>
                                         </tr>
                                         <tr>
-                                            <td>SKBO_GND</td>
-                                            <td>{{ __('custom.Unkdown') }}</td>
+                                            <td>SKBO_N_GND</td>
+                                            <td>121,8 MHz</td>
                                         </tr>
                                         <tr>
-                                            <td>SKBO_CLR</td>
-                                            <td>{{ __('custom.Unkdown') }}</td>
+                                            <td>SKBO_S_GND</td>
+                                            <td>122,75 MHz</td>
                                         </tr>
                                         <tr>
-                                            <td>SKBO_APP</td>
-                                            <td>{{ __('custom.Unkdown') }}</td>
+                                            <td>SKBO_N_TWR</td>
+                                            <td>118,1 MHz</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SKBO_S_TWR</td>
+                                            <td>118,25 MHz</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SKBO_N_APP</td>
+                                            <td>121,3 MHz</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SKBO_S_APP</td>
+                                            <td>119,65 MHz</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SKBO_W_APP</td>
+                                            <td>119,95 MHz</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SKBO_APP (Arrivals)</td>
+                                            <td>119,5 MHz</td>
                                         </tr>
                                         <tr>
                                             <td>SKED_CTR</td>
-                                            <td>{{ __('custom.Unkdown') }}</td>
+                                            <td>128,6 MHz</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -101,6 +78,50 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6">
+                    <div class="card homeCard">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                {{ __('custom.RunwayInformation') }}
+
+                            </h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Runway</th>
+                                            <th scope="col">Heading</th>
+                                            <th scope="col">Elevation</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>13L</td>
+                                            <td>134°</td>
+                                            <td>8356 ft</td>
+                                        </tr>
+                                        <tr>
+                                            <td>31R</td>
+                                            <td>314°</td>
+                                            <td>8360 ft</td>
+                                        </tr>
+                                        <tr>
+                                            <td>13R</td>
+                                            <td> 134°</td>
+                                            <td>8352 ft</td>
+                                        </tr>
+                                        <tr>
+                                            <td>31L</td>
+                                            <td>314°</td>
+                                            <td>8356 ft</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
         <div class="col-md-12">

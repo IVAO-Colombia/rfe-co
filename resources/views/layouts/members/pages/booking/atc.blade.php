@@ -25,6 +25,13 @@ function getPositionBooking($dependence)
         integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy" crossorigin="anonymous">
     </script>
     <style>
+        h1 {
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 800;
+            color: var(--principal-color);
+            font-size: 3.5rem;
+        }
+
         .bg-success {
             background-color: #2EC662 !important;
             color: #fff;
@@ -37,6 +44,13 @@ function getPositionBooking($dependence)
     </style>
 
     <div class="container">
+
+        <div class="row">
+            <div class="col-md-12 text-center my-3">
+                <h1>ATC Booking</h1>
+            </div>
+        </div>
+
         <div class="table-responsive">
             @php
                 
@@ -133,6 +147,9 @@ function getPositionBooking($dependence)
                 </tbody>
             </table>
         </div>
+        <div class="clearfix" style="height: 2rem">
+        </div>
+
     </div>
 
 </body>

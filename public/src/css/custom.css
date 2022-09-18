@@ -50,15 +50,16 @@ li .dropdown-item:active {
 
 /* carousel */
 header.header1 {
-    background: linear-gradient(
+    background:
+    /* linear-gradient(
             325deg,
             rgba(1, 15, 45, 0.050) 0%,
             rgba(1, 15, 45, 0.200) 25%,
             rgba(17, 22, 32, 1) 100%
-        ),
-        url(../img/carousel/RFO_BOGOTA.png) no-repeat center top;
+        ), */
+        url(../img/carousel/RFO-BOGOTA22.jpg) no-repeat center top;
     background-size: cover;
-    min-height: 88.5vh;
+    min-height: 100vh;
 }
 
 .briefing__body{
