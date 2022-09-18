@@ -284,3 +284,18 @@ fieldset:disabled .by.btn {
         margin-top: 0;
     }
 }
+
+@media (max-width: 480px) and (min-width: 320px) {
+    header.header1 {
+        background:
+        /* linear-gradient(
+                325deg,
+                rgba(1, 15, 45, 0.050) 0%,
+                rgba(1, 15, 45, 0.200) 25%,
+                rgba(17, 22, 32, 1) 100%
+            ), */
+            url(../img/carousel/RFO-BOGOTA-MOBILE.jpg) no-repeat center top;
+        background-size: cover;
+        min-height: 100vh;
+    }
+}
