@@ -26,7 +26,19 @@ class TableBookingatc extends Component
             $position->save();
             $this->emit("OpenSweetalert","Booked successfully!");
         }
+    }
 
+    public function unbook($id){
+        if(!auth()->user()){
+            return redirect()->route('Login');
+        }
+
+        $position = BookingAtc::find($id);
+        if($position->vid == auth()->user()->id){
+            $position->vid = null;
+            $position->save();
+            $this->emit("OpenSweetalert","Unbooked successfully!");
+        }
     }
 
 

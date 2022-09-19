@@ -45,7 +45,7 @@
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <td width="15%"><strong>FACILITY</strong></td>
+                    <td><b>FACILITY</b></td>
                     <td style="text-align: center">13:00 - 14:00 UTC</td>
                     <td style="text-align: center">14:00 - 15:00 UTC</td>
                     <td style="text-align: center">15:00 - 16:00 UTC</td>
@@ -53,6 +53,7 @@
                     <td style="text-align: center">17:00 - 18:00 UTC</td>
                     <td style="text-align: center">18:00 - 19:00 UTC</td>
                     <td style="text-align: center">19:00 - 20:00 UTC</td>
+                    <td style="text-align: center">20:00 - 21:00 UTC</td>
                     <td style="text-align: center">21:00 - 22:00 UTC</td>
                     <td style="text-align: center">22:00 - 23:00 UTC</td>
                     <td style="text-align: center">23:00 - 00:00 UTC</td>
@@ -71,6 +72,12 @@
                                         class="form-check-input"></x-jet-input>
                                 @endif
                                 {{ $item->vid }}
+                                @if (auth()->user() && auth()->user()->id == $item->vid)
+                                    <div class="d-inline-block" style="cursor: pointer"
+                                        wire:click="unbook({{ $item->id }})">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </div>
+                                @endif
                             </td>
                         @endforeach
                     </tr>
