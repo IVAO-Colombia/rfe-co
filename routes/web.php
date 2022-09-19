@@ -9,6 +9,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\FlightController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UnbookController;
+use App\Http\Livewire\Front\TableBookingatc;
 
 /*
 Language
@@ -51,6 +52,8 @@ Route::view('/briefing/pilots', 'layouts.members.pages.briefing.pilots')->name('
 Route::view('/booking/atc',"layouts.members.pages.booking.atc")->name('AtcBooking');
 Route::view('/statistics', 'layouts.members.pages.statistics.statistics')->name('Statistics');
 Route::view('/profile', 'layouts.members.pages.profile.profile')->name('Profile');
+
+Route::get('/booking/atc/book',TableBookingatc::class)->name('atcbookingbook');
 
 /*
 IVAO Login

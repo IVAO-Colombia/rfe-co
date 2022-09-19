@@ -25,6 +25,7 @@
 
 <!-- Custom Tags -->
 <title>{{ config('app.name') }}</title>
-<link rel="icon" type="image/svg+xml" href="{{ URL::asset('/src/img/favicon.png') }}" />
+<link rel="icon" type="image/svg+xml" href="{{ asset('/src/img/favicon.png') }}" />
 <meta name="description" content="" />
 <meta name="author" content="co-web@ivao.aero" />
+@livewireScripts()

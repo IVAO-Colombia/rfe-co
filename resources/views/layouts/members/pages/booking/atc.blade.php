@@ -12,11 +12,11 @@ function getPositionBooking($dependence)
 <html lang="{{ app()->getLocale() }}">
 
 <head>
-    @include('layouts/members/head')
+    @include('layouts.members.head')
 </head>
 
 <body>
-    @include('layouts/members/nav')
+    @include('layouts.members.nav')
     <div class="clearfix" style="height: 2rem"></div>
     <!-- Optional JavaScript -->
 
@@ -41,6 +41,11 @@ function getPositionBooking($dependence)
             background-color: #E93434 !important;
             color: #fff;
         }
+
+        .btn-large {
+            font-size: 1.5rem;
+            padding: 10px 30px;
+        }
     </style>
 
     <div class="container">
@@ -53,22 +58,22 @@ function getPositionBooking($dependence)
 
         <div class="table-responsive">
             @php
-                
+
                 $skbodel = getPositionBooking('SKBO_DEL');
-                
+
                 $skbo_n_gnd = getPositionBooking('SKBO_N_GND');
                 $skbo_s_gnd = getPositionBooking('SKBO_S_GND');
-                
+
                 $skbo_n_twr = getPositionBooking('SKBO_N_TWR');
                 $skbo_s_twr = getPositionBooking('SKBO_S_TWR');
-                
+
                 $skbo_n_app = getPositionBooking('SKBO_N_APP');
                 $skbo_s_app = getPositionBooking('SKBO_S_APP');
                 $skbo_w_app = getPositionBooking('SKBO_W_APP');
                 $skboapp = getPositionBooking('SKBO_APP');
-                
+
                 $skedctr = getPositionBooking('SKED_CTR');
-                
+
             @endphp
             <table class="table table-bordered table-striped">
                 <thead>
@@ -149,8 +154,10 @@ function getPositionBooking($dependence)
         </div>
         <div class="row">
             <div class="col-md-12 text-center my-3">
+                <a href="{{ route('atcbookingbook') }}" class="btn btn-primary btn-large mb-3">Book</a>
+                <br>
                 <p class="lead"> For reservations send an email to <a
-                        href="mailto:co-xx@ivao.aero">co-xx@ivao.aero</a> </p>
+                        href="mailto:co-atcops@ivao.aero">co-atcops@ivao.aero</a> </p>
             </div>
         </div>
 
@@ -158,7 +165,7 @@ function getPositionBooking($dependence)
         </div>
 
     </div>
-
+    @livewireStyles()
 </body>
 
 </html>

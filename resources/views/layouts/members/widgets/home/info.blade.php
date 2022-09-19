@@ -65,7 +65,7 @@
                                             <td>119,95 MHz</td>
                                         </tr>
                                         <tr>
-                                            <td>SKBO_APP (Arrivals)</td>
+                                            <td>SKBO_C_APP</td>
                                             <td>119,5 MHz</td>
                                         </tr>
                                         <tr>
