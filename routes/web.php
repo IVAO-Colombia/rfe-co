@@ -53,7 +53,7 @@ Route::view('/booking/atc',"layouts.members.pages.booking.atc")->name('AtcBookin
 Route::view('/statistics', 'layouts.members.pages.statistics.statistics')->name('Statistics');
 Route::view('/profile', 'layouts.members.pages.profile.profile')->name('Profile');
 
-Route::get('/booking/atc/book',TableBookingatc::class)->name('atcbookingbook');
+Route::get('/booking/atc/book',TableBookingatc::class)->name('atcbookingbook')->middleware('auth');
 
 /*
 IVAO Login
