@@ -11,6 +11,7 @@ class TableBookingatc extends Component
 
     public function render()
     {
+
         return view('livewire.front.table-bookingatc')->layout("layouts.users");
     }
 

@@ -55,30 +55,20 @@ function getPositionBooking($dependence)
                 <h1>ATC Booking</h1>
             </div>
         </div>
+        @php
+            $facilitys = ['SKBO_DEL', 'SKBO_N_GND', 'SKBO_S_GND', 'SKBO_N_TWR', 'SKBO_S_TWR', 'SKBO_N_APP', 'SKBO_S_APP', 'SKBO_W_APP', 'SKBO_C_APP', 'SKED_CTR'];
 
+            foreach ($facilitys as $key => $value) {
+                $facilitybooks[$value] = getPositionBooking($value);
+            }
+
+        @endphp
         <div class="table-responsive">
-            @php
 
-                $skbodel = getPositionBooking('SKBO_DEL');
-
-                $skbo_n_gnd = getPositionBooking('SKBO_N_GND');
-                $skbo_s_gnd = getPositionBooking('SKBO_S_GND');
-
-                $skbo_n_twr = getPositionBooking('SKBO_N_TWR');
-                $skbo_s_twr = getPositionBooking('SKBO_S_TWR');
-
-                $skbo_n_app = getPositionBooking('SKBO_N_APP');
-                $skbo_s_app = getPositionBooking('SKBO_S_APP');
-                $skbo_w_app = getPositionBooking('SKBO_W_APP');
-                $skboapp = getPositionBooking('SKBO_APP');
-
-                $skedctr = getPositionBooking('SKED_CTR');
-
-            @endphp
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <td width="15%"><strong>FACILITY</strong></td>
+                        <td><b>FACILITY</b></td>
                         <td style="text-align: center">13:00 - 14:00 UTC</td>
                         <td style="text-align: center">14:00 - 15:00 UTC</td>
                         <td style="text-align: center">15:00 - 16:00 UTC</td>
@@ -95,63 +85,20 @@ function getPositionBooking($dependence)
                 </thead>
 
                 <tbody>
-                    <tr>
-                        <td>SKBO_DEL</td>
-                        @foreach ($skbodel as $item)
-                            <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
-                            </td>
-                        @endforeach
-                    </tr>
-                    <tr>
-                        <td>SKBO_N_TWR</td>
-                        @foreach ($skbo_n_twr as $item)
-                            <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
-                            </td>
-                        @endforeach
-                    </tr>
-                    <tr>
-                        <td>SKBO_S_TWR</td>
-                        @foreach ($skbo_s_twr as $item)
-                            <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
-                            </td>
-                        @endforeach
-                    </tr>
-                    <tr>
-                        <td>SKBO_N_APP</td>
-                        @foreach ($skbo_n_app as $item)
-                            <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
-                            </td>
-                        @endforeach
-                    </tr>
-                    <tr>
-                        <td>SKBO_S_APP</td>
-                        @foreach ($skbo_s_app as $item)
-                            <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
-                            </td>
-                        @endforeach
-                    </tr>
-                    <tr>
-                        <td>SKBO_W_APP</td>
-                        @foreach ($skbo_w_app as $item)
-                            <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
-                            </td>
-                        @endforeach
-                    </tr>
-                    <tr>
-                        <td>SKBO_APP (Arrivals)</td>
-                        @foreach ($skboapp as $item)
-                            <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
-                            </td>
-                        @endforeach
-                    </tr>
-                    <tr>
-                        <td>SKED_CTR</td>
-                        @foreach ($skedctr as $item)
-                            <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
-                            </td>
-                        @endforeach
-                    </tr>
-                </tbody>
+                    @foreach ($facilitybooks as $key => $facility)
+                        <tr>
+                            <td>{{ $key }}</td>
+                            @foreach ($facility as $item)
+                                <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">
+                                    @if (!$item->vid)
+                                        -
+                                    @endif
+                                    {{ $item->vid }}
+
+                                </td>
+                            @endforeach
+                        </tr>
+                    @endforeach
             </table>
         </div>
         <div class="row">

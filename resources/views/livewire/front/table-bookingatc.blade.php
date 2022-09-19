@@ -16,6 +16,11 @@
             background-color: #E93434 !important;
             color: #fff;
         }
+
+        .btn-large {
+            font-size: 1.5rem;
+            padding: 10px 30px;
+        }
     </style>
     <div class="row">
         <div class="col-md-12 text-center my-3">
@@ -25,21 +30,13 @@
 
     <div class="table-responsive">
         @php
-            $facilitys = ['SKBO_DEL', 'SKBO_N_GND', 'SKBO_S_GND', 'SKBO_N_TWR', 'SKBO_S_TWR', 'SKBO_N_APP', 'SKBO_S_APP', 'SKBO_W_APP', 'SKBO_C_APP', 'SKED_CTR'];
+            $facilitys = [['rating' => 2, 'name' => 'SKBO_DEL'], ['rating' => 3, 'name' => 'SKBO_N_GND'], ['rating' => 3, 'name' => 'SKBO_S_GND'], ['rating' => 3, 'name' => 'SKBO_N_TWR'], ['rating' => 3, 'name' => 'SKBO_S_TWR'], ['rating' => 3, 'name' => 'SKBO_N_APP'], ['rating' => 3, 'name' => 'SKBO_S_APP'], ['rating' => 3, 'name' => 'SKBO_W_APP'], ['rating' => 3, 'name' => 'SKBO_C_APP'], ['rating' => 3, 'name' => 'SKED_CTR']];
 
             foreach ($facilitys as $key => $value) {
-                $facilitybooks[$value] = $this->getPositionBooking($value);
+                $item = (object) $value;
+                $item->book = $this->getPositionBooking($item->name);
+                $facilitybooks[$key] = $item;
             }
-
-            // $skbodel = $skbo_n_gnd = $this->getPositionBooking('SKBO_N_GND');
-            // $skbo_s_gnd = $this->getPositionBooking('SKBO_S_GND');
-            // $skbo_n_twr = $this->getPositionBooking('SKBO_N_TWR');
-            // $skbo_s_twr = $this->getPositionBooking('SKBO_S_TWR');
-            // $skbo_n_app = $this->getPositionBooking('SKBO_N_APP');
-            // $skbo_s_app = $this->getPositionBooking('SKBO_S_APP');
-            // $skbo_w_app = $this->getPositionBooking('SKBO_W_APP');
-            // $skboapp = $this->getPositionBooking('SKBO_APP');
-            // $skedctr = $this->getPositionBooking('SKED_CTR');
 
         @endphp
         <table class="table table-bordered table-striped">
@@ -64,10 +61,10 @@
             <tbody>
                 @foreach ($facilitybooks as $key => $facility)
                     <tr>
-                        <td>{{ $key }}</td>
-                        @foreach ($facility as $item)
+                        <td>{{ $facility->name }}</td>
+                        @foreach ($facility->book as $item)
                             <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">
-                                @if (!$item->vid)
+                                @if (!$item->vid && auth()->user() && $facility->rating <= auth()->user()->ratingatc)
                                     <x-jet-input type="checkbox" wire:click="booking({{ $item->id }})"
                                         class="form-check-input"></x-jet-input>
                                 @endif
@@ -82,60 +79,21 @@
                         @endforeach
                     </tr>
                 @endforeach
-
-                {{-- <tr>
-                    <td>SKBO_N_TWR</td>
-                    @foreach ($skbo_n_twr as $item)
-                        <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
-                        </td>
-                    @endforeach
-                </tr>
-                <tr>
-                    <td>SKBO_S_TWR</td>
-                    @foreach ($skbo_s_twr as $item)
-                        <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
-                        </td>
-                    @endforeach
-                </tr>
-                <tr>
-                    <td>SKBO_N_APP</td>
-                    @foreach ($skbo_n_app as $item)
-                        <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
-                        </td>
-                    @endforeach
-                </tr>
-                <tr>
-                    <td>SKBO_S_APP</td>
-                    @foreach ($skbo_s_app as $item)
-                        <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
-                        </td>
-                    @endforeach
-                </tr>
-                <tr>
-                    <td>SKBO_W_APP</td>
-                    @foreach ($skbo_w_app as $item)
-                        <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
-                        </td>
-                    @endforeach
-                </tr>
-                <tr>
-                    <td>SKBO_C_APP</td>
-                    @foreach ($skboapp as $item)
-                        <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
-                        </td>
-                    @endforeach
-                </tr>
-                <tr>
-                    <td>SKED_CTR</td>
-                    @foreach ($skedctr as $item)
-                        <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">{{ $item->vid }}
-                        </td>
-                    @endforeach
-                </tr> --}}
             </tbody>
         </table>
     </div>
+    <div class="row">
+        <div class="col-md-12 text-center my-3">
+            @if (!auth()->user())
+                <a href="{{ route('Login') }}" class="btn btn-primary btn-large mb-3">Login & Book</a>
+            @else
+                <a href="{{ route('AtcBooking') }}" class="btn btn-primary btn-large mb-3">View Schedule</a>
+            @endif
 
+            <br>
+
+        </div>
+    </div>
     <div class="clearfix" style="height: 2rem">
     </div>
 
