@@ -30,7 +30,7 @@
 
     <div class="table-responsive">
         @php
-            $facilitys = [['rating' => 2, 'name' => 'SKBO_DEL'], ['rating' => 3, 'name' => 'SKBO_N_GND'], ['rating' => 3, 'name' => 'SKBO_S_GND'], ['rating' => 3, 'name' => 'SKBO_N_TWR'], ['rating' => 3, 'name' => 'SKBO_S_TWR'], ['rating' => 3, 'name' => 'SKBO_N_APP'], ['rating' => 3, 'name' => 'SKBO_S_APP'], ['rating' => 3, 'name' => 'SKBO_W_APP'], ['rating' => 3, 'name' => 'SKBO_C_APP'], ['rating' => 3, 'name' => 'SKED_CTR']];
+            $facilitys = [['rating' => 5, 'name' => 'SKBO_DEL'], ['rating' => 5, 'name' => 'SKBO_N_GND'], ['rating' => 5, 'name' => 'SKBO_S_GND'], ['rating' => 5, 'name' => 'SKBO_N_TWR'], ['rating' => 5, 'name' => 'SKBO_S_TWR'], ['rating' => 6, 'name' => 'SKBO_N_APP'], ['rating' => 6, 'name' => 'SKBO_S_APP'], ['rating' => 6, 'name' => 'SKBO_W_APP'], ['rating' => 6, 'name' => 'SKBO_C_APP'], ['rating' => 6, 'name' => 'SKED_CTR']];
 
             foreach ($facilitys as $key => $value) {
                 $item = (object) $value;
