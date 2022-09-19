@@ -105,8 +105,8 @@ function getPositionBooking($dependence)
             <div class="col-md-12 text-center my-3">
                 <a href="{{ route('atcbookingbook') }}" class="btn btn-primary btn-large mb-3">Book</a>
                 <br>
-                <p class="lead"> For reservations send an email to <a
-                        href="mailto:co-atcops@ivao.aero">co-atcops@ivao.aero</a> </p>
+                {{-- <p class="lead"> For reservations send an email to <a
+                        href="mailto:co-atcops@ivao.aero">co-atcops@ivao.aero</a> </p> --}}
             </div>
         </div>
 
