@@ -64,7 +64,10 @@
                         <td>{{ $facility->name }}</td>
                         @foreach ($facility->book as $item)
                             <td class="text-center {{ $item->vid ? 'bg-danger' : 'bg-success' }}">
-                                @if (!$item->vid && auth()->user() && $facility->rating <= auth()->user()->ratingatc)
+                                @if (!$item->vid &&
+                                    auth()->user() &&
+                                    $facility->rating <= auth()->user()->ratingatc &&
+                                    auth()->user()->division == 'CO')
                                     <x-jet-input type="checkbox" wire:click="booking({{ $item->id }})"
                                         class="form-check-input"></x-jet-input>
                                 @endif
@@ -84,12 +87,7 @@
     </div>
     <div class="row">
         <div class="col-md-12 text-center my-3">
-            @if (!auth()->user())
-                <a href="{{ route('Login') }}" class="btn btn-primary btn-large mb-3">Login & Book</a>
-            @else
-                <a href="{{ route('AtcBooking') }}" class="btn btn-primary btn-large mb-3">View Schedule</a>
-            @endif
-
+            <a href="{{ route('AtcBooking') }}" class="btn btn-primary btn-large mb-3">View Schedule</a>
             <br>
 
         </div>
