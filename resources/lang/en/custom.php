@@ -16,7 +16,7 @@ return [
     'Logout' => 'Log-out',
     'Profile' => 'My Flights',
     /* Briefing */
-    'PilotsBriefingPdf' => "/src/doc/Briefing.pdf",
+    'PilotsBriefingPdf' => "/src/doc/RFE-BOGOTA.pdf",
     /* Email */
     'Email' => 'Email:',
     'EmailParagraph' => 'Enter your email, in order to optimize and have a better experience with the RFE SKBO 2022.',
