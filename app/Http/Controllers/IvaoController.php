@@ -12,6 +12,10 @@ class IvaoController extends Controller
 {
     public function redirect()
     {
+        if(!session()->has('url.intended'))
+        {
+            session(['url.intended' => url()->previous()]);
+        }
         return Socialite::driver('ivao')->redirect();
     }
 
@@ -44,7 +48,7 @@ class IvaoController extends Controller
                 $userToUpdate->va_member_ids = implode(",", $user["va_member_ids"]);
                 $userToUpdate->save();
 
-                return redirect('/');
+                return redirect(session('url.intended'));
             } else {
                 $newUser = User::create([
                     'id' => intval($user["vid"]),
@@ -63,7 +67,7 @@ class IvaoController extends Controller
 
                 Auth::login($newUser);
 
-                return redirect('/');
+                return redirect(session('url.intended'));
             }
         } catch (Exception $e) {
             dd($e->getMessage());
