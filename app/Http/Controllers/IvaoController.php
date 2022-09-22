@@ -12,10 +12,7 @@ class IvaoController extends Controller
 {
     public function redirect()
     {
-        if(!session()->has('url.intended'))
-        {
             session(['url.intended' => url()->previous()]);
-        }
         return Socialite::driver('ivao')->redirect();
     }
 
