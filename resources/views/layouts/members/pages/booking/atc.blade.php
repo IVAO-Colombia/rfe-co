@@ -93,8 +93,8 @@ function getPositionBooking($dependence)
                                     @if (!$item->vid)
                                         -
                                     @else
-                                        <a href="https://www.ivao.aero/member?id={{ $item->vid }}" target="_blank"
-                                            class="text-white">
+                                        <a href="https://www.ivao.aero/Member.aspx?ID={{ $item->vid }}"
+                                            target="_blank" class="text-white">
                                             {{ $item->vid }}</a>
                                     @endif
                                 </td>

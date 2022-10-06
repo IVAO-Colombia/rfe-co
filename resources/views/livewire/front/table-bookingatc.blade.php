@@ -71,7 +71,7 @@
                                     <x-jet-input type="checkbox" wire:click="booking({{ $item->id }})"
                                         class="form-check-input"></x-jet-input>
                                 @else
-                                    <a href="https://www.ivao.aero/member?id={{ $item->vid }}" target="_blank"
+                                    <a href="https://www.ivao.aero/Member.aspx?ID={{ $item->vid }}" target="_blank"
                                         class="text-white">
                                         {{ $item->vid }}</a>
                                 @endif
