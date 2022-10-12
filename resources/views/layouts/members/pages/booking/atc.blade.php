@@ -56,8 +56,8 @@ function getPositionBooking($dependence)
             </div>
         </div>
         @php
-            // 'SKBO_N_GND','SKBO_N_TWR',
-            $facilitys = ['SKBO_DEL', 'SKBO_GND', 'SKBO_TWR', 'SKBO_N_APP', 'SKBO_S_APP', 'SKBO_W_APP', 'SKBO_C_APP', 'SKED_CTR'];
+            // 'SKBO_N_GND','SKBO_N_TWR', 'SKBO_N_APP', 'SKBO_S_APP', 'SKBO_W_APP',
+            $facilitys = ['SKBO_DEL', 'SKBO_GND', 'SKBO_TWR', 'SKBO_APP', 'SKED_CTR'];
 
             foreach ($facilitys as $key => $value) {
                 $facilitybooks[$value] = getPositionBooking($value);
