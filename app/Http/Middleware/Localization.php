@@ -17,6 +17,14 @@ class Localization
     {
         if (\Session::has('locale')) {
             \App::setlocale(\Session::get('locale'));
+        } else {
+            $locale = substr($request->server('HTTP_ACCEPT_LANGUAGE'), 0, 2);
+
+            if ($locale != 'es' && $locale != 'en') {
+                $locale = 'en';
+            }
+
+            \App::setlocale($locale);
         }
         return $next($request);
     }

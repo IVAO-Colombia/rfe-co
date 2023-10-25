@@ -1,0 +1,89 @@
+<?php
+
+namespace App\Http\Livewire\Website;
+
+use App\Models\BookingAtc;
+use Illuminate\Support\Facades\Auth;
+use Livewire\Component;
+
+class AtcBooking extends Component
+{
+    public $facilitys,
+        $facilitybooks;
+
+    public $modal = false;
+
+    public $booking_id,
+        $dependence,
+        $start_at,
+        $end_at;
+
+    public function render()
+    {
+        $this->facilitys = [
+            ['rating' => 4, 'name' => 'SKCL_GND'],
+            ['rating' => 4, 'name' => 'SKCL_TWR'],
+            ['rating' => 5, 'name' => 'SKCL_APP'],
+            ['rating' => 6, 'name' => 'SKED_CTR']
+        ];
+
+        foreach ($this->facilitys as $key => $value) {
+            $item = (object) $value;
+            $item->book = $this->getPositionBooking($item->name);
+            $this->facilitybooks[$key] = $item;
+        }
+
+
+        return view('website.rfe23.booking.atc', [
+            'bookings' => $this->facilitybooks,
+        ])->extends('website.rfe23.template');
+    }
+
+    public function closeModal()
+    {
+        $this->modal = false;
+    }
+
+    public function openModal()
+    {
+        $this->modal = true;
+    }
+
+    public function showConfirm($id)
+    {
+        $atc = BookingAtc::findOrFail($id);
+
+        $this->booking_id = $id;
+        $this->dependence = $atc->dependence;
+        $this->start_at = $atc->start_at;
+        $this->end_at = $atc->end_at;
+
+        $this->openModal();
+    }
+
+    public function booking($id)
+    {
+        $atc = BookingAtc::findOrFail($id);
+
+        if (!auth()->user()) {
+            return redirect()->route('Login');
+        }
+
+        if ($atc->user_id == null) {
+            $atc->user_id = Auth::user()->id;
+            $atc->save();
+        } else {
+            return route('home');
+        }
+
+        $this->closeModal();
+        return redirect()->back()->with("message", "Se ha reservado correctamente!");
+    }
+
+    public function getPositionBooking($dependence)
+    {
+        return BookingAtc::where('dependence', $dependence)
+            ->orderBy('order')
+            ->get();
+    }
+}

@@ -2,65 +2,67 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\IvaoController;
-use App\Http\Controllers\AirlineController;
-use App\Http\Controllers\AirportController;
-use App\Http\Controllers\BookingController;
-use App\Http\Controllers\FlightController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\UnbookController;
+
+use App\Http\Controllers\{
+    HomeController,
+    IvaoController,
+};
+
+use App\Http\Livewire\Website\{
+    Flight,
+    Profile,
+    AtcBooking,
+};
+
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 
 /*
-Language
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
 */
 
-Route::get('locale/{locale}', function ($locale) {
-    Session::put('locale', $locale);
+Route::get('/', [HomeController::class, 'index'])->name("home");
+
+Route::get("locale/{locale}", function ($locale) {
+    Session::put("locale", $locale);
     return redirect()->back();
 });
 
-/*
 
-Admins
-
-*/
-
-Route::resource('/admin/airlines', AirlineController::class)->middleware('auth', 'Staff');
-Route::resource('/admin/airports', AirportController::class)->middleware('auth', 'Staff');
-Route::resource('/admin/bookings', BookingController::class)->middleware('auth', 'Staff');
-
-/*
-
-Members
-
-*/
-
-Route::resource('/admin/users', UserController::class)->middleware('auth');
-Route::resource('/booking/flights', FlightController::class);
-Route::resource('/booking/flights/unbook', UnbookController::class);
+Route::prefix('booking')->group(function () {
+    Route::get('pilot', Flight::class)
+        ->name('booking.pilot');
+    Route::get('atc', AtcBooking::class)
+        ->name('booking.atc')
+        ->middleware(['auth']);
+    Route::get('stats', function () {
+        return view('website.rfe23.statics.view');
+    })->name('booking.stats');
+});
 
 
-/*
+Route::get("login", [IvaoController::class, "sso"])->name("ivao.login-sso");
 
-Nav
+Route::get("auth/callback", [IvaoController::class, "sso"])->name(
+    "ivao.login-sso-callback"
+);
 
-*/
-
-Route::view('/', 'layouts/members/home')->name('Home');
-Route::view('/briefing/pilots', 'layouts/members/pages/briefing/pilots')->name('PilotsBriefing');
-Route::get('/booking/atc', function () {
-    return redirect("https://tools.ivao.aero/event/CO/schedule/1753");
-})->name('AtcBooking');
-Route::view('/statistics', 'layouts/members/pages/statistics/statistics')->name('Statistics');
-Route::view('/profile', 'layouts/members/pages/profile/profile')->name('Profile');
-
-/*
-IVAO Login
-*/
-
-Route::get('auth/ivao', [IvaoController::class, 'redirect'])->name('Login');
-Route::get('auth/ivao/callback', [IvaoController::class, 'callback']);
-Route::get('auth/ivao/logout', function () {
+Route::get("/logout", function () {
     Auth::logout();
-    return redirect()->route('Home');
-})->name('Logout');
+    return redirect('/');
+})->name("ivao.logout");
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', Profile::class)->name('dashboard');
+});

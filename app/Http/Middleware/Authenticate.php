@@ -14,8 +14,8 @@ class Authenticate extends Middleware
      */
     protected function redirectTo($request)
     {
-        if (! $request->expectsJson()) {
-            return route('Login');
+        if (!$request->expectsJson()) {
+            return route('ivao.login-sso');
         }
     }
 }
