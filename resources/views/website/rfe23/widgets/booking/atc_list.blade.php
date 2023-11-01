@@ -60,7 +60,8 @@
                         <x-input type="checkbox" wire:click="showConfirm({{ $item->id }})" class="form-check-input">
                         </x-input> {{__('Free')}}
                         @elseif ($facility->rating > Auth::user()->ratingatc)
-                        <span></span>
+                        <span>{{__('Necessary rating')}}: <br>
+                            {{$this->facilitysIvao[$facility->rating]['name']}}</span>
                         @else
                         Reservado por: <br><a class="hover:text-ivao-blue"
                             href="https://www.ivao.aero/Member.aspx?ID={{ $item->user->vid }}">{{$item->user->vid}}</a>

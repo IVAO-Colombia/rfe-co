@@ -9,6 +9,7 @@ use Livewire\Component;
 class AtcBooking extends Component
 {
     public $facilitys,
+        $facilitysIvao,
         $facilitybooks;
 
     public $modal = false;
@@ -20,11 +21,27 @@ class AtcBooking extends Component
 
     public function render()
     {
+
+        $this->facilitysIvao = [
+            ['rating' => 0, 'name' => "null"],
+            ['rating' => 1, 'name' => "null"],
+            ['rating' => 2, 'name' => "AS1"],
+            ['rating' => 3, 'name' => "AS2"],
+            ['rating' => 4, 'name' => "AS3"],
+            ['rating' => 5, 'name' => "ADC"],
+            ['rating' => 6, 'name' => "APC"],
+            ['rating' => 7, 'name' => "ACC"],
+            ['rating' => 8, 'name' => "SEC"],
+            ['rating' => 9, 'name' => "SAI"],
+            ['rating' => 10, 'name' => "CAI"],
+        ];
+
+
         $this->facilitys = [
             ['rating' => 4, 'name' => 'SKCL_GND'],
             ['rating' => 4, 'name' => 'SKCL_TWR'],
             ['rating' => 5, 'name' => 'SKCL_APP'],
-            ['rating' => 6, 'name' => 'SKED_CTR']
+            ['rating' => 6, 'name' => 'SKED_CTR'],
         ];
 
         foreach ($this->facilitys as $key => $value) {
