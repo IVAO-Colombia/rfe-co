@@ -26,3 +26,25 @@ h1 {
     background-color: #0D2C99;
     border-radius: 3px;
 }
+
+#footer .widget-categories a { color: #888; }
+
+#footer { display: block; position: relative; background-color: #f9f9fa; font-size: 14px; line-height: 32px; font-weight: 400; font-family: inherit; }
+
+#footer a:not(.btn):not(:hover) { color: #3c4043; }
+
+#footer p { font-family: inherit; }
+
+#footer a:not(.btn) { font-weight: 400; }
+
+#footer .footer-content { padding: 60px 0 40px 0; }
+
+#footer .widget .widget-title, #footer .widget h4 { font-size: 14px; letter-spacing: 1px; font-weight: 600; /* ul { li { a { font-family: $headings-font-family; font-size: 15px; line-height: 32px; color: #999; } } } */ }
+
+#footer .widget ul { padding-left: 0; }
+
+#footer .copyright-content { min-height: 80px; padding: 30px 0; background-color: #f1f1f3; font-size: 13px; }
+
+#footer .logo { margin-bottom: 54px; margin-top: 12px; max-width: 80px; }
+
+#footer .footer-logo { border-right: 1px solid #333; margin-bottom: 20px; margin-right: 18px; padding-right: 16px; }
