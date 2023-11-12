@@ -76,7 +76,7 @@
                     <tbody class="bg-white divide-y divide-gray-200">
                         @foreach ($arrivalFlights as $item)
                         <tr>
-                            <td class="px-4 py-4 text-sm font-medium whitespace-nowrap">
+                            <td class="px-4 py-4 text-sm font-medium whitespace-nowrap max-w-xs">
                                 <div>
 
                                     @if (File::exists(public_path('assets/img/airlines/'. $item->getOACIAirline() .
@@ -85,7 +85,7 @@
                                         src="{{asset('assets/img/airlines/'. $item->getOACIAirline() . '.png')}}"
                                         alt="{{$item->airline}}_Logo">
                                     @else
-                                    <h4 class="text-gray-700 text-center text-3xl">
+                                    <h4 class="text-gray-700 truncate text-center text-3xl">
                                         {{$item->airline}}</h4>
                                     @endif
                                 </div>

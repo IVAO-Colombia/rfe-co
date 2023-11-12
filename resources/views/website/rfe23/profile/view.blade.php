@@ -11,7 +11,7 @@
 
     <div class="grid auto-rows-auto">
 
-
+        @if (count($flights) >= 1)
         <div class="m-5">
             <h2 class="text-2xl font-bold">Vuelos reservados:</h2>
         </div>
@@ -23,13 +23,22 @@
                     <div class="bg-white relative drop-shadow-2xl  rounded-3xl p-4 m-4">
                         <div class="flex-none sm:flex">
                             <div class="flex-auto justify-evenly">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center  my-1">
+
+                                <div class="flex items-center">
+                                    <div class="flex flex-col">
                                         <h2 class="font-medium">{{$item->airline}}</h2>
                                     </div>
-                                    <div class="ml-auto text-blue-800">{{$item->aircraft}}</div>
+                                    <div class="flex flex-col mx-auto text-blue-800">{{$item->aircraft}}</div>
+                                    <div class="flex flex-col">
+                                        <button type="button" wire:click='unbookFlights("{{$item->id}}")'
+                                            class="bg-ivao-blue rounded p-1 text-white hover:bg-ivao-red">
+                                            Cancelar reserva
+                                        </button>
+                                    </div>
                                 </div>
+
                                 <div class="border-b border-dashed border-b-2 my-5"></div>
+
                                 <div class="flex items-center">
                                     <div class="flex flex-col">
                                         <div class="flex-auto text-xs text-gray-400 my-1">
@@ -55,10 +64,12 @@
 
                                     </div>
                                 </div>
+
                                 <div class="border-b border-dashed border-b-2 my-5 pt-5">
                                     <div class="absolute rounded-full w-5 h-5 bg-blue-900 -mt-2 -left-2"></div>
                                     <div class="absolute rounded-full w-5 h-5 bg-blue-900 -mt-2 -right-2"></div>
                                 </div>
+
                                 <div class="flex items-center mb-5 p-5 text-sm">
                                     <div class="flex flex-col">
                                         <span class="text-sm">Flight</span>
@@ -119,7 +130,14 @@
             @endforeach
 
         </div>
-        @if ($bookingsAtc)
+        @else
+        <div class="m-5">
+            <h2 class="text-2xl font-bold">No tienes vuelos reservados</h2>
+        </div>
+        @endif
+
+
+        @if (count($bookingsAtc) >= 1)
 
         <div class="m-5">
             <h2 class="text-2xl font-bold">Reservas ATC:</h2>
@@ -144,6 +162,10 @@
                 </div>
             </div>
             @endforeach
+        </div>
+        @else
+        <div class="m-5">
+            <h2 class="text-2xl font-bold">No hay reservas ATC</h2>
         </div>
         @endif
     </div>
