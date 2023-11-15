@@ -10,15 +10,10 @@
             <h1 class="text-3xl leading-tight sm:text-4xl md:text-5xl xl:text-6xl
             font-bold text-gray-900"><span
                     class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-blue-500 to-red-500">RFO
-                    CALI</span> {{__('the 2nd event more waiting of the year')}}
+                    CALI</span> {{__('the 2nd most awaited event of the year')}}
             </h1>
             <p class="mt-8 text-gray-700">
-                {{__("The Alfonso Bonilla Aragón International Airport (previously called Palmaseca International
-                Airport)
-                (IATA: CLO, ICAO: SKCL) located in the Palmaseca district of the municipality of Palmira, Valle del
-                Cauca, Colombia, serves the city of Cali. It was inaugurated in 1971. Currently, it is the third airport
-                in Colombia in passenger movement, after El Dorado International Airport in the city of Bogotá, José
-                María Córdova International Airport in Medellín.")}}
+                {{__("common.airportInformation")}}
             </p>
         </div>
         <div class="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
@@ -34,11 +29,8 @@
             <h1 class="text-xl leading-tight sm:text-4xl md:text-5xl xl:text-4xl
             font-bold text-gray-900">{{__('How to participate?')}} </h1>
             <p class=" mt-8 text-gray-700">
-                {{__('Look at the menu above and hover over your preference (ATC or Pilot), then click book and see a
-                flights, Or If you choose control this day, you can see the position available according of you rating
-                or disponibilty.')}} <br>
-                {{__("Before going online, don't forget to read the flight briefing, and we strongly recommend to keep
-                it at your fingertips during your flight!")}}
+                {{__('common.howParticipate')}}<br>
+                {{__('common.recomendation')}}
             </p>
         </div>
     </div>

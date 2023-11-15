@@ -60,7 +60,7 @@
                                 <ul class="py-2 text-sm text-gray-700" aria-labelledby="atcDropdown">
                                     <li>
                                         <a href="{{route('booking.atc')}}" class="block px-4 py-2 hover:bg-gray-100">
-                                            {{__('Booking')}}</a>
+                                            {{__('Book')}}</a>
                                     </li>
                                     <li>
                                         <a href="#" class="block px-4 py-2 hover:bg-gray-100">{{__('Brefing')}}</a>
@@ -85,7 +85,7 @@
                                 <ul class="py-2 text-sm text-gray-700">
                                     <li>
                                         <a href="{{route('booking.pilot')}}"
-                                            class="block px-4 py-2 hover:bg-gray-100">{{__('Booking')}}</a>
+                                            class="block px-4 py-2 hover:bg-gray-100">{{__('Book')}}</a>
                                     </li>
                                     <li>
                                         <a href="#" class="block px-4 py-2 hover:bg-gray-100">{{__('Brefing')}}</a>
@@ -131,7 +131,7 @@
                         </div>
                     </div>
                     @endauth
-                    <div class="lenguaje_dropdown">
+                    <div class="lenguaje_dropdown mx-2">
                         <button id="lenguajeDropDown" data-dropdown-toggle="dropdownDelayLenguaje"
                             data-dropdown-trigger="hover" data-dropdown-delay='80'
                             class="block md:text-white mr-4 hover:text-neutral-400" type="button"><i

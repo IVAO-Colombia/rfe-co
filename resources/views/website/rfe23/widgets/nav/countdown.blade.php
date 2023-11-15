@@ -19,7 +19,7 @@
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Display the result in the element with id="countdown"
-        document.getElementById("countdown").innerHTML = "{{__("Days left")}}: " +
+        document.getElementById("countdown").innerHTML = "{{__("Time left")}}: " +
             days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
         // If the count down is finished, write some text
