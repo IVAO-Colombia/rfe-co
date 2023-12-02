@@ -118,14 +118,17 @@
                             <td class="px-4 py-4 text-sm font-medium whitespace-nowrap">
                                 <div
                                     class="inline px-3 py-1 text-sm font-normal rounded-full text-red-700 gap-x-2 bg-red-300">
-                                    <i class="fa-solid fa-lock"></i> {{__('Reserved by')}} <b>{{$item->user_id}}</b>
+                                    <i class="fa-solid fa-lock"></i> {{__('Reserved by')}} <a target="_blank"
+                                        class="underline"
+                                        href="https://www.ivao.aero/Member.aspx?ID={{ $item->user_id }}">
+                                        <b>{{$item->user_id}}</b></a>
                                 </div>
                             </td>
                             @else
                             <td class="px-4 py-4 text-sm font-medium whitespace-nowrap">
                                 <button type="button" wire:click='showConfirm({{$item->id}})'
                                     class="inline px-3 py-1 text-sm font-normal rounded-full text-emerald-700 gap-x-2 bg-emerald-300"><i
-                                        class="fa-solid fa-address-book"></i> {{__('Book')}}</a>
+                                        class="fa-solid fa-address-book"></i> {{__('Book')}}</button>
                             </td>
                             @endif
                         </tr>

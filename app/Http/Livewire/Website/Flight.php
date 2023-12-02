@@ -32,8 +32,8 @@ class Flight extends Component
         $flights = new Flights;
 
         return view('website.rfe23.booking.flights', [
-            'departureFlights' => $flights->getDepartureFlights(),
-            'arrivalFlights' => $flights->getArrivalFlights(),
+            'departureFlights' => $flights->getDepartureFlights("SKBO"),
+            'arrivalFlights' => $flights->getArrivalFlights("SKBO"),
             'flights' => Flights::all(),
         ])->extends('website.rfe23.template');
     }
@@ -92,7 +92,7 @@ class Flight extends Component
         $flight = Flights::findOrFail($id);
 
         if (!auth()->user()) {
-            return redirect()->route('Login');
+            return redirect()->route('ivao.login-sso');
         }
 
         if ($flight->user_id == null) {

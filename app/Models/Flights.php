@@ -24,15 +24,15 @@ class Flights extends Model
         }
     }
 
-    public function getArrivalFlights()
+    public function getArrivalFlights(String $airport)
     {
-        return Flights::where('destination', 'SKCL')
+        return Flights::where('destination', $airport)
             ->get();
     }
 
-    public function getDepartureFlights()
+    public function getDepartureFlights(String $airport)
     {
-        return Flights::where('departure', 'SKCL')
+        return Flights::where('departure', $airport)
             ->get();
     }
 

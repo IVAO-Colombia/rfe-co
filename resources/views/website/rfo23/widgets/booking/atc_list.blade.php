@@ -39,9 +39,6 @@
                 <th scope="col" class="px-6 py-3">
                     22:00 UTC - 23:00 UTC
                 </th>
-                <th scope="col" class="px-6 py-3">
-                    23:00 UTC - 23:59 UTC
-                </th>
             </tr>
         </thead>
         <tbody>

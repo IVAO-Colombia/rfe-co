@@ -38,10 +38,13 @@ class AtcBooking extends Component
 
 
         $this->facilitys = [
-            ['rating' => 4, 'name' => 'SKCL_GND'],
-            ['rating' => 4, 'name' => 'SKCL_TWR'],
-            ['rating' => 5, 'name' => 'SKCL_APP'],
-            ['rating' => 6, 'name' => 'SKED_CTR'],
+            ['rating' => 4, 'name' => 'SKBO_S_GND'],
+            ['rating' => 4, 'name' => 'SKBO_N_GND'],
+            ['rating' => 5, 'name' => 'SKBO_N_TWR'],
+            ['rating' => 5, 'name' => 'SKBO_S_TWR'],
+            ['rating' => 6, 'name' => 'SKBO_N_APP'],
+            ['rating' => 6, 'name' => 'SKBO_S_APP'],
+            ['rating' => 7, 'name' => 'SKED_CTR'],
         ];
 
         foreach ($this->facilitys as $key => $value) {
