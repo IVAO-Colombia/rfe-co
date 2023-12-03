@@ -38,12 +38,11 @@ class AtcBooking extends Component
 
 
         $this->facilitys = [
-            ['rating' => 4, 'name' => 'SKBO_S_GND'],
-            ['rating' => 4, 'name' => 'SKBO_N_GND'],
-            ['rating' => 5, 'name' => 'SKBO_N_TWR'],
-            ['rating' => 5, 'name' => 'SKBO_S_TWR'],
-            ['rating' => 6, 'name' => 'SKBO_N_APP'],
-            ['rating' => 6, 'name' => 'SKBO_S_APP'],
+            ['rating' => 4, 'name' => 'SKBO_DEL'],
+            ['rating' => 5, 'name' => 'SKBO_S_GND'],
+            ['rating' => 5, 'name' => 'SKBO_N_GND'],
+            ['rating' => 5, 'name' => 'SKBO_TWR'],
+            ['rating' => 6, 'name' => 'SKBO_APP'],
             ['rating' => 7, 'name' => 'SKED_CTR'],
         ];
 
