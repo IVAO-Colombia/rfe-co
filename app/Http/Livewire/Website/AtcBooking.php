@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\Website;
 
-use App\Models\BookingAtc;
+use App\Models\bookingAtc;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 

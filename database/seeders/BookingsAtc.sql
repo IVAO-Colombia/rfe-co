@@ -7,55 +7,55 @@ INSERT INTO
         `order`
     )
 VALUES (
-        'SKED_DEL',
+        'SKBO_DEL',
         '15:00:00',
         '16:00:00',
         NULL,
         NULL
     ), (
-        'SKED_DEL',
+        'SKBO_DEL',
         '16:00:00',
         '17:00:00',
         NULL,
         NULL
     ), (
-        'SKED_DEL',
+        'SKBO_DEL',
         '17:00:00',
         '18:00:00',
         NULL,
         NULL
     ), (
-        'SKED_DEL',
+        'SKBO_DEL',
         '18:00:00',
         '19:00:00',
         NULL,
         NULL
     ), (
-        'SKED_DEL',
+        'SKBO_DEL',
         '19:00:00',
         '20:00:00',
         NULL,
         NULL
     ), (
-        'SKED_DEL',
+        'SKBO_DEL',
         '20:00:00',
         '21:00:00',
         NULL,
         NULL
     ), (
-        'SKED_DEL',
+        'SKBO_DEL',
         '21:00:00',
         '22:00:00',
         NULL,
         NULL
     ), (
-        'SKED_DEL',
+        'SKBO_DEL',
         '22:00:00',
         '23:00:00',
         NULL,
         NULL
     ), (
-        'SKED_DEL',
+        'SKBO_DEL',
         '23:00:00',
         '23:59:00',
         NULL,

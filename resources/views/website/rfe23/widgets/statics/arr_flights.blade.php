@@ -49,7 +49,7 @@ $total_flights_arr = 0;
             </div>
             <div class="w-full bg-gray-200 rounded-full">
                 <div class="bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-300 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
-                    style="width: {{$book_arr}}%"> {{ $finalPercentage }}%</div>
+                    style="width: {{$book_arr}}%"> {{ $book_arr }}%</div>
             </div>
         </div>
     </div>
